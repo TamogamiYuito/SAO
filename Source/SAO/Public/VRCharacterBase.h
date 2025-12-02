@@ -6,6 +6,8 @@
 #include "GameFramework/Character.h"
 #include "VRCharacterBase.generated.h"
 
+
+class UCameraComponent;
 UCLASS()
 class SAO_API AVRCharacterBase : public ACharacter
 {
@@ -16,14 +18,14 @@ public:
 	AVRCharacterBase();
 
 protected:
-	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<UCameraComponent> Camera;
 
-	// Called to bind functionality to input
-	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	UPROPERTY(VisibleAnywhere)
+	TObjectPtr<USceneComponent> Origin;
+
+public:	
 
 };
