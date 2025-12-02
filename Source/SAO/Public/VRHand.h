@@ -28,16 +28,16 @@ protected:
 
 #pragma region Components
 
-	UPROPERTY(VisibleAnywhere, Category = "Components")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	TObjectPtr<UMotionControllerComponent> MotionController;
 
-	UPROPERTY(VisibleAnywhere, Category = "Components|Hands")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components|Hands")
 	TObjectPtr<USkeletalMeshComponent> HandMesh;
 
-	UPROPERTY(VisibleAnywhere, Category = "Components|Hands")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components|Hands")
 	TObjectPtr<UWidgetInteractionComponent> widgetInteractionComponent;
 
-	UPROPERTY(VisibleAnywhere, Category = "Components|Hands")
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components|Hands")
 	TObjectPtr<USphereComponent> GrabSphere;
 
 #pragma endregion
@@ -48,10 +48,10 @@ protected:
 #pragma region HandData
 
 	// Defines Which Hand It Is
-	UPROPERTY(EditDefaultsOnly, Category = "Components|Hands|HandData")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components|Hands|HandData")
 	EControllerHand HandType;
 
-	UPROPERTY(EditDefaultsOnly, Category = "Components|Hands|HandData")
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components|Hands|HandData")
 	bool bMirrorAnimation;
 
 #pragma endregion
