@@ -26,6 +26,12 @@ protected:
 	virtual void BeginPlay() override;
 	virtual void Tick(float DeltaTime) override;
 
+	UFUNCTION(BlueprintCallable)
+	void GrabObject();
+
+	UFUNCTION(BlueprintCallable)
+	void ReleaseObject();
+
 #pragma region Components
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")

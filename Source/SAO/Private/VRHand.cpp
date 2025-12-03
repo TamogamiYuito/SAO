@@ -64,3 +64,13 @@ void AVRHand::Tick(float DeltaTime)
 
 }
 
+void AVRHand::GrabObject()
+{
+
+}
+
+void AVRHand::ReleaseObject()
+{
+
+}
+
