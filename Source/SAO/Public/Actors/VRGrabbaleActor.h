@@ -28,7 +28,6 @@ public:
 
 
 protected:
-
 	virtual void OnGrab(USkeletalMeshComponent* InComponent, const FVector& GrabLocation);
 	virtual void OnRelease(USkeletalMeshComponent* InComponent);
 

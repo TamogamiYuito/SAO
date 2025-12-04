@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "Interface/InteractInterface.h"
 #include "VRHand.generated.h"
 
 
@@ -62,6 +63,6 @@ protected:
 
 #pragma endregion
 private:
-
+	TScriptInterface<IInteractInterface> CurrentlyGrabbedActor;
 	
 };
